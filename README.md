@@ -2,10 +2,10 @@
 
 https://auth0.com/blog/jp-use-docker-to-create-a-node-development-environment/#dockerfile
 
-$ docker run --rm -it --name node-docker \
--v $PWD:/home/app -p 8080:3000 \
-node-docker
+<pre>
+$ docker run --rm -it --name node-docker -v $PWD:/home/app -p 8080:3000 node-docker
 
 $ npm start
 
 $ docker exec -it $(docker ps -qf "name=node-docker") /bin/bash
+</pre>
